@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-const genAI = new GoogleGenerativeAI('AIzaSyAglzOFQQVCKUePe9XsCrttBxmLPupe4wE'); // replace with your key
+const genAI = new GoogleGenerativeAI('your_key'); // replace with your key
 
 export default function GeminiInsight({ situationData, crisisType }) {
   const [insight, setInsight] = useState('');
