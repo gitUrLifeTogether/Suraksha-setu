@@ -5,6 +5,7 @@ import MeshNetworkSimulator from './MeshNetworkSimulator';
 import CrisisLog from './CrisisLog';
 import StaffAssessment from './StaffAssessment';
 import ResourceEstimator from './ResourceEstimator';
+import GeminiInsight from './GeminiInsight';   // <-- add this line
 
 export default function StaffView({ activeCrisis, setActiveCrisis, volunteers, incidents, onAddVictim, situationData }) {
   return (
@@ -17,7 +18,7 @@ export default function StaffView({ activeCrisis, setActiveCrisis, volunteers, i
         <StaffAssessment activeCrisis={activeCrisis} onUpdateSituation={onAddVictim} />
         <BiasAwareDispatcher activeCrisis={activeCrisis} volunteers={volunteers} situationData={situationData} />
         <ResourceEstimator situationData={situationData} />
-        <GeminiInsight situationData={situationData} crisisType={activeCrisis?.type} />
+        <GeminiInsight situationData={situationData} crisisType={activeCrisis?.type} />  {/* <-- add this line */}
         <CrisisLog incidents={incidents} />
       </div>
     </div>
