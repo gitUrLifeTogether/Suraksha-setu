@@ -17,6 +17,7 @@ export default function StaffView({ activeCrisis, setActiveCrisis, volunteers, i
         <StaffAssessment activeCrisis={activeCrisis} onUpdateSituation={onAddVictim} />
         <BiasAwareDispatcher activeCrisis={activeCrisis} volunteers={volunteers} situationData={situationData} />
         <ResourceEstimator situationData={situationData} />
+        <GeminiInsight situationData={situationData} crisisType={activeCrisis?.type} />
         <CrisisLog incidents={incidents} />
       </div>
     </div>
